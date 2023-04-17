@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "transactions",
+  "info": {
+    "singularName": "transaction",
+    "pluralName": "transactions",
+    "displayName": "Transaction",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "description": {
+      "type": "string"
+    },
+    "amount": {
+      "type": "float"
+    },
+    "type": {
+      "type": "string"
+    },
+    "balance": {
+      "type": "float"
+    },
+    "walletId": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::wallet.wallet"
+    }
+  }
+}
